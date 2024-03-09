@@ -61,7 +61,7 @@ flow = Flow.from_client_secrets_file(client_secrets_file, scopes=scopes, redirec
 # connecting to database to store analysis
 
 conn=psycopg2.connect(
-  dbname=os.environ(['postgres://mynewpsql_user:gJuvm0l7QaVjUhjz8x6ayjgszrMFOQ13@dpg-cnll32q1hbls738r28k0-a:5432/mynewpsql'],)
+  dbname=os.environ.get(['postgres://mynewpsql_user:gJuvm0l7QaVjUhjz8x6ayjgszrMFOQ13@dpg-cnll32q1hbls738r28k0-a:5432/mynewpsql'],)
 )
 cur=conn.cursor()
 # cur.execute("CREATE TABLE news_count (word_count INT,sentence_count INT,stop_count INT, tag_count JSONB, text varchar(300))")
