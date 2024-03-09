@@ -64,8 +64,8 @@ cur=conn.cursor()
 
 # 'postgres://mynewpsql_user:gJuvm0l7QaVjUhjz8x6ayjgszrMFOQ13@dpg-cnll32q1hbls738r28k0-a:5432/mynewpsql'
 
-# cur.execute("CREATE TABLE news_count (word_count INT,sentence_count INT,stop_count INT, tag_count JSONB, text varchar(300))")
-# conn.commit()
+cur.execute("CREATE TABLE IF NOT EXISTS news_count (word_count INT,sentence_count INT,stop_count INT, tag_count JSONB, text varchar(300))")
+conn.commit()
 
 # functions used to analyse the data
 def sentence_count(text):  # to count number of sentences 
