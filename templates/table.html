@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEWS WEBSITE</title>
+    <link rel="stylesheet"href="{{ url_for('static', filename='table.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body >
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">urlbee</h1>
+            <nav class="navbar">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="/">Home</a></li>
+                    <li class="nav-item"><a href="/loginnormal">Sign in</a></li>
+                    <li class="nav-item"><a href="/loginnormal">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+     <div class="rec1">  
+        <h4><b>Admin Login</b></h4>
+        <br>
+        <form method="post" action="/adminlogin">  
+           <b> Name:</b> <br><i class="fa fa-user" aria-hidden="true"></i><input  type="text" name="name" placeholder=" username">
+            <br>
+            <b>Email:</b><br> <i class="fa fa-envelope" aria-hidden="true"></i><input  type="email" name="Email" placeholder=" email">     
+            <br> 
+           <b> Password:</b><br><i class="fa fa-lock" aria-hidden="true"></i><input  type="password" name="password" placeholder=" password">
+            <br>
+            <button class="btn btn-primary" type="submit" >view</button>
+        </form>
+    </div>  
+     <div class="rec2" >
+        {% if msg_new_mail=='sanjayvp08@gmail.com' and msg_new_pass=='0' %}
+        <table class="table-bordered">            
+            <tr>  
+                <th>WORD COUNT</th>
+                <th>SENTENCE COUNT</th>
+                <th>STOP COUNT</th>
+                <th>TAG COUNT</th> 
+                <th>LINK</th> 
+            </tr>  
+            <tr>           
+                <td>{{msg_word}}</td>
+                <td>{{msg_sentences}}</td>
+                <td>{{msg_stop}}</td>
+                <td>{{msg_tag}}</td>
+                <td>{{msg_text}}</td>
+            </tr>     
+            <tr>         
+            {% for i in msg_tab %}
+            <tr>
+                <td>{{i[0]}}</td>
+                <td>{{i[1]}}</td>
+                <td>{{i[2]}}</td>
+                <td>{{i[3]}}</td>
+                <td>{{i[4]}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% endif %}
+    </div>  
+</body>
+</html> 
