@@ -1,0 +1,128 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+/* Header styles */
+.header {
+    background-color: aliceblue;
+    color: #fff;
+    padding: 20px 0;
+    overflow-y: hidden;
+    height: 100px;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.navbar {
+    color: #333;
+    text-align: right;
+    word-spacing: 8px;
+    margin-left: 72%;
+}
+
+.nav-list {
+    list-style: none;
+}
+
+.nav-item {
+    display: inline-block;   
+}
+.nav-item a {
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+    word-spacing: normal;
+    margin-right: 20px;
+    margin-bottom: 0px;
+}
+.box1,.box2,.box3,.box5,.box6{            
+    background-color: aliceblue;
+    padding: 10px;
+    margin-top:20px ;  
+    border: 1px solid #ddd;
+    box-sizing: border-box;    
+    margin-left: 40px;
+    margin-right: 40px;     
+}
+.box5{
+    font-weight: 300;
+}
+.boxgroup{
+    text-align:justify;
+    padding:30px;
+    display: flex;
+}
+.boxgroup2 {
+    width: 50%; 
+    border: 1px solid #ddd; 
+    font-weight: 400;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: aliceblue;
+}
+.boxgroup3 {
+    width: 50%; 
+    border: 1px solid #ddd; 
+    padding: 10px;
+    font-weight: 400;
+    box-sizing: border-box;
+    background-color: aliceblue;
+}
+.box1  form input{
+    box-sizing: content-box;
+    margin-top: 0px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.optional{
+    text-align:center;
+}
+form{
+    text-align: center;
+    text-decoration: black;
+}
+p{
+    color: red;
+}
+input{
+    text-align: justify;
+}
+table {
+    width: 100%;  
+    border-collapse:collapse;
+}
+th {
+    background-color: #f2f2f2; 
+    color: #333;  
+    padding: 8px; 
+    text-align: left; 
+    border-bottom: 1px solid #ddd; 
+}
+tr {
+    border-bottom: 1px solid #ddd;  
+    align-items: center;
+}
+td {
+    padding: 8px;   
+}
+tr:nth-child(even) {
+    background-color: #f9f9f9; 
+}
+i{ 
+   margin-right: 10px;
+   margin-left: 8px;
+}
+
+::-webkit-scrollbar{
+    width: 0px;
+}

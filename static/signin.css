@@ -1,0 +1,54 @@
+*{
+  padding: 0px;
+  margin:0px;
+  box-sizing: border-box;
+}
+.header {
+  background-color: aliceblue;
+  color: #fff;
+  padding: 10px 0;
+  overflow-y: hidden;
+  height: 100px;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+.navbar {
+  color: #333;
+  text-align: right;
+  word-spacing: 8px;
+  margin-left: 85%;
+}
+
+.nav-list {
+  list-style: none;
+}
+
+.nav-item {
+  display: inline-block;   
+}
+.nav-item a {
+  color: black;
+  text-decoration: none;
+  font-weight: 700;
+}
+.block{
+  background-color: aliceblue;
+  margin-left: 33%;
+  margin-right: 33%;
+  margin-top: 5px;
+  padding: 23px;
+  text-align: center;
+
+}
+.block1, form, input{
+  margin-top: 5px;
+}
+
