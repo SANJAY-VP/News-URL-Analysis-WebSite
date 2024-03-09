@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>urlbee Sign In</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+  <link rel="stylesheet" href="signin.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">urlbee</h1>
+      <nav class="navbar">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="/">Home</a></li>
+          <li class="nav-item"><a href="/userlogin">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+    <div class="block">
+        <h3>SignIn</h3>
+        <br>
+        <form method="post" action="/userlogin">    
+        <b> <i class="fa fa-user" aria-hidden="true"></i> Name: <br> </b>
+            <input type="text" name="username" placeholder="username">
+            <br>
+        <b> <i class="fa fa-envelope" aria-hidden="true"></i> Email: <br> </b>
+                <input type="email" name="Gmail" placeholder="email" >
+                <br>
+        <b> <i class="fa fa-phone" aria-hidden="true"></i> Phone No: <br> </b>
+            <input type="phone" name="phone" placeholder="phone" >
+            <br>
+        <b> <i class="fa fa-lock" aria-hidden="true"></i>Password: <br></b> 
+            <input type="password" name="Password" placeholder="password" >
+            <br><br>
+            <button class="btn btn-primary"  type="submit" >Sign Up</button> 
+        </form>
+        <br>
+        {% if msg_email==0 %}
+        <p> Invalid Input</p>
+        {% endif %}
+        have an account <a href="/userlogin">login</a>
+    </div>
+</body>
+</html>

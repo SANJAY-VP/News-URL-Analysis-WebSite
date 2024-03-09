@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Awesome Website</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">urlbee</h1>
+            <nav class="navbar">
+                <ul class="nav-list">
+                    <a href="/table" class="btn btn-primary" id="adminbtn">Admin</a><br>
+                    <li class="nav-item"><a href="/">Home</a></li>
+                    <li class="nav-item"><a href="/usersignin">Sign in</a></li>
+                    <li class="nav-item"><a href="/loginnormal">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2 class="hero-title">Welcome to My News URL Analysis Website</h2>
+            <p class="hero-text">Discover our cutting-edge news analysis platform! <br>Stay informed, engaged, and ahead of the curve with personalized insights and summaries.  Welcome to the future of news!</p>
+            <a href="/usersignin" class="btn btn-primary">Get started</a>
+        </div>
+    </section>
+
+
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <br>
+            <h3 class="section-title">what we provide?</h3>
+            <p class="section-text">Our news website takes the URL of any news article and performs a comprehensive analysis. Our cutting-edge technology analyzes the sentiment of the news, identifies difficult words, and even provides synonyms for challenging vocabulary. With our platform, you can gain deeper insights into the news and enhance your understanding of complex topics. Stay informed and empowered with our news analysis tool.</p>
+        </div>
+    </section>
+    
+    <div class="allcards">
+    <div class="card">
+        <img src="{{ url_for('static', filename='text.png') }}" alt="Image" class="card-img"><br>
+        <div class="card-content">
+          <h3 class="card-title">Text Analysis</h3>
+          <p class="card-text">from word and sentence counting to identifying stop tags and UPOS tags, it provides a detailed breakdown of your text's composition. Our sentiment analysis feature evaluates the emotional tone of your text. With these powerful capabilities, our tool empowers you to analyze and understand text with ease and accuracy.</p>
+          <a href="#" class="btn btn-primary">Read More</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="{{ url_for('static', filename='vocab.png') }}" alt="Image" class="card-img">
+        <div class="card-content">
+            <br><br>
+          <h3 class="card-title">Vocabulary Analysis</h3>
+          <p class="card-text">innovative tool designed to enhance your reading experience by seamlessly capturing difficult words within any text. With this tool at your fingertips, you'll effortlessly identify and understand challenging vocabulary, boosting your confidence and comprehension while reading. Say goodbye to interruptions.</p>
+          <a href="#" class="btn btn-primary">Read More</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="{{ url_for('static', filename='read.png') }}" alt="Image" class="card-img">
+        <div class="card-content">
+          <h3 class="card-title">Readabilty Analysis</h3>
+          <p class="card-text"> a tool to know which helps to the audience attention span. This metric is particularly useful for assessing readability and tailoring text to readability standards.</p>
+          <br>
+          <a href="#" class="btn btn-primary">Read More</a>
+        </div>
+      </div>
+      </div>
+  <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 My Website</p>
+        </div>
+    </footer>
+</body>
+</html>
