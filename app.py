@@ -15,6 +15,7 @@ from nltk.sentiment import SentimentIntensityAnalyzer
 from nltk.corpus import wordnet
 from bs4 import BeautifulSoup
 import textstat
+nltk.download('all')
 
 # creating instance of classes
 app = Flask(__name__)
