@@ -59,10 +59,9 @@ redirect_uri = 'http://127.0.0.1:5000/callback'
 flow = Flow.from_client_secrets_file(client_secrets_file, scopes=scopes, redirect_uri=redirect_uri)
 
 # connecting to database to store analysis
-DATABASE_URL = 'postgres://mynewpsql_user:gJuvm0l7QaVjUhjz8x6ayjgszrMFOQ13@dpg-cnll32q1hbls738r28k0-a.oregon-postgres.render.com/mynewpsql'
 
 conn=psycopg2.connect(
-  dbname=os.environ(['DATABASE_URL']),
+  dbname=os.environ(['postgres://mynewpsql_user:gJuvm0l7QaVjUhjz8x6ayjgszrMFOQ13@dpg-cnll32q1hbls738r28k0-a5432/mynewpsql']),
 )
 cur=conn.cursor()
 # cur.execute("CREATE TABLE news_count (word_count INT,sentence_count INT,stop_count INT, tag_count JSONB, text varchar(300))")
