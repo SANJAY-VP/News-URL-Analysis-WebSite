@@ -56,7 +56,7 @@ client_secrets_file = 'app.json'
 scopes = ['https://www.googleapis.com/auth/userinfo.profile',
           'https://www.googleapis.com/auth/userinfo.email',
           'openid']
-redirect_uri = 'http://127.0.0.1:5000/callback'
+redirect_uri = 'https://renderdemo-hwtw.onrender.com/callback'
 flow = Flow.from_client_secrets_file(client_secrets_file, scopes=scopes, redirect_uri=redirect_uri)
 
 # connecting to database to store analysis
